@@ -11,12 +11,11 @@ import { ORDER_PAY_RESET } from '../constants/orderConstants'
 const OrderScreen = ({ match }) => {
   const dispatch = useDispatch()
   const orderId = match.params.id
-  console.log(orderId)
   const [sdkReady, setSdkReady] = useState(false)
   const orderDetail = useSelector((state) => state.orderDetail)
   const { order, loading, error } = orderDetail
   const orderPay = useSelector((state) => state.orderPay)
-  const { loading: loadingPay, success: successPay } = orderDetail
+  const { loading: loadingPay, success: successPay } = orderPay
   if (!loading) {
     const addDecimals = (num) => {
       return (Math.round(num * 100) / 100).toFixed(2)
