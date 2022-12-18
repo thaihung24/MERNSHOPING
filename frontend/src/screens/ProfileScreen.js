@@ -50,7 +50,6 @@ const ProfileScreen = ({ location, history }) => {
       )
     }
   }
-  console.log(loadingOrders, error, orders)
   return (
     <Row>
       <Col md={3}>
